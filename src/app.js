@@ -16,7 +16,7 @@ const app = express();
 
 
 // allowlist for frontend origins
-const FRONTEND_ORIGINS = (process.env.CORS_ORIGINS || 'http://localhost:3000,http://localhost:5173').split(',');
+const FRONTEND_ORIGINS = (process.env.CORS_ORIGINS || 'http://localhost:3000').split(',');
 
 // CORS config: must be applied before routes and before rate limiter
 const corsOptions = {
