@@ -1,6 +1,6 @@
 // Express app, middleware, routes, error handler
 require('dotenv').config();
-require('express-async-errors'); // handle async errors without try/catch
+// require('express-async-errors'); // handle async errors without try/catch
 const express = require('express');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
@@ -36,7 +36,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // Explicitly respond to preflight for all routes (optional but useful)
-app.options('*', cors(corsOptions));
+app.options(/.*/, cors(corsOptions));
 
 // Basic security middlewares
 app.use(helmet());
