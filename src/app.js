@@ -16,7 +16,7 @@ const app = express();
 
 
 // allowlist for frontend origins
-const FRONTEND_ORIGINS = (process.env.CORS_ORIGINS || 'http://localhost:3000').split(',');
+const FRONTEND_ORIGINS = (process.env.CORS_ORIGINS || 'https://employee-management-system-backend-z3fk.onrender.com').split(',');
 
 // CORS config: must be applied before routes and before rate limiter
 const corsOptions = {
